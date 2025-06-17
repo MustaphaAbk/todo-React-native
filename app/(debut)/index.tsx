@@ -15,7 +15,7 @@ export default function debut () {
         return (<View style={{ flex: 1, backgroundColor: 'orange' }}>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20  }}>
             <AboutScreen
-                title="Welcome to our app"
+                title="Welcome to Our App"
                 description="This is the first slide of our app. Here we introduce the main features and benefits of using our application."
                 />
             <TouchableOpacity onPress={increment} style={{ padding: 10, backgroundColor: '#fff', borderRadius: 5, marginTop: 20 , width: '100%', maxWidth: 200, alignItems: 'center' }}>
@@ -58,6 +58,6 @@ export default function debut () {
         )
     }
     else if (count === 4) {
-        router.push('/(login)')
+        router.replace('/(login)')
     }
 }
