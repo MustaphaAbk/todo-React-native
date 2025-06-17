@@ -21,14 +21,14 @@ export default function NewTask() {
 
         try {
             const token = await AsyncStorage.getItem('token'); // ✅ Corrected with await
-
-            const response = await fetch('https://j2g0n1dx-8080.uks1.devtunnels.ms/api/tasks', {
+            const userId = await AsyncStorage.getItem('userId'); // Get userId from AsyncStorage
+            const response = await fetch('http://localhost:8080/api/tasks', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 },
-                body: JSON.stringify({ title, description, dueDate }),
+                body: JSON.stringify({ title, description, dueDate , userId }),
             });
 
             const data = await response.json();

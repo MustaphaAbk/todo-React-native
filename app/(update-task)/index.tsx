@@ -24,7 +24,7 @@ const handleUpdateTask = async () => {
     setLoading(true);
     try {
         const token = await AsyncStorage.getItem('token'); // Ensure you have the token stored in AsyncStorage
-        const response = await fetch(`https://j2g0n1dx-8080.uks1.devtunnels.ms/api/tasks/${id}`, {
+        const response = await fetch(`http://localhost:8080/api/tasks/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

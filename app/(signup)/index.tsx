@@ -15,7 +15,7 @@ export default function Signup(){
         }
         setLoading(true);
         try {
-            const response = await fetch('https://j2g0n1dx-8080.uks1.devtunnels.ms/api/auth/register', {
+            const response = await fetch('http://localhost:8080/api/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
